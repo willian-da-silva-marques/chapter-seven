@@ -1,8 +1,8 @@
 package com.ocajexam.chapter.seven.heranca.com_classes_abstratas;
 
-public class MapleTree extends Plant {
+public class Rose extends Plant {
 
-	private static final int AMOUNT_TO_GROW_IN_ONE_GROWING_SEASON = 2;
+	private static final int AMOUNT_TO_GROW_IN_ONE_GROWING_SEASON = 3;
 
 	private void grow() {
 		int currentHeight = getHeight();
@@ -13,26 +13,28 @@ public class MapleTree extends Plant {
 	public void doSpring() {
 		this.grow();
 		addYearToAge();
-		System.out.println("Spring: The maple tree is starting to grow leaves and new branches");
+		System.out.println("Spring: The rose is starting to grow leaves and new branches");
 		System.out.println("\tCurrent Age: " + getAge() + " " + " Current Height: " + getHeight());
 	}
 
 	@Override
 	public void doSummer() {
 		this.grow();
-		System.out.println("Summer: The maple tree is continuing to grow");
+		System.out.println("Summer: The rose is continuing to grow");
 		System.out.println("\tCurrent Age: " + getAge() + " " + " Current Height: " + getHeight());
 	}
 
 	@Override
 	public void doFall() {
-		System.out.println("Fall: The maple tree has stopped growing and is losing its leaves");
+		this.grow();
+		System.out.println("Fall: The rose is continuing to grow");
 		System.out.println("\tCurrent Age: " + getAge() + " " + " Current Height: " + getHeight());
 	}
 
 	@Override
 	public void doWinter() {
-		System.out.println("Winter: The maple tree is dormant");
+		System.out.println("Fall: The rose has stopped growing and is losing its leaves");
 		System.out.println("\tCurrent Age: " + getAge() + " " + " Current Height: " + getHeight());
 	}
+
 }

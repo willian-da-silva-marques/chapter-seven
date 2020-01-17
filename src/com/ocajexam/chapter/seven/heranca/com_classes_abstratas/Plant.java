@@ -10,7 +10,7 @@ public abstract class Plant {
 	}
 
 	public void addYearToAge() {
-		age++;
+		this.age++;
 	}
 
 	public int getHeight() {
